@@ -196,13 +196,26 @@
                             <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brand-500 to-teal-400 blur-2xl opacity-30 transform rotate-3"></div>
                             <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-xl">
                                 
-                                <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-brand-100 to-teal-100 dark:from-slate-800 dark:to-slate-950 border border-brand-200 dark:border-slate-700 flex flex-col items-center justify-center relative overflow-hidden mb-6">
-                                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-500/20 rounded-full blur-xl"></div>
-                                    <div class="w-28 h-28 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shadow-inner text-brand-600 dark:text-brand-400 text-4xl font-bold mb-3 border border-brand-100 dark:border-slate-700">
-                                        NW
+                                <div class="w-full aspect-square rounded-2xl border border-brand-200 dark:border-slate-700 relative overflow-hidden mb-6 bg-slate-100 dark:bg-slate-800 group shadow-inner">
+                                    <!-- Profile Image -->
+                                    <img src="20FF580E-6797-49B9-B899-B7C399D90CFD_L0_001-13_10_2569%2022_57_31.jpg" 
+                                         alt="ณิชเบญญา วาทะสิทธิ์ (ออมสิน)" 
+                                         class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                                         onerror="if(!this.dataset.triedRaw){this.dataset.triedRaw='1';this.src='https://raw.githubusercontent.com/69202302032-creator/ao-port/main/20FF580E-6797-49B9-B899-B7C399D90CFD_L0_001-13_10_2569%2022_57_31.jpg';}else if(!this.dataset.triedProfile){this.dataset.triedProfile='1';this.src='profile.jpg';}else{this.classList.add('hidden');document.getElementById('profile-fallback').classList.remove('hidden');}">
+                                    
+                                    <!-- Fallback Avatar if profile image is missing -->
+                                    <div id="profile-fallback" class="hidden w-full h-full bg-gradient-to-br from-brand-100 to-teal-100 dark:from-slate-800 dark:to-slate-950 flex flex-col items-center justify-center p-4 text-center">
+                                        <div class="w-24 h-24 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shadow-inner text-brand-600 dark:text-brand-400 text-3xl font-bold mb-2 border border-brand-100 dark:border-slate-700">
+                                            NW
+                                        </div>
+                                        <span class="text-xs text-slate-500 dark:text-slate-400">อัปโหลดไฟล์ profile.jpg ขึ้น GitHub</span>
                                     </div>
-                                    <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">ออมสิน (Aomsin)</span>
-                                    <span class="text-xs text-slate-500 dark:text-slate-400 mt-1"> Public Health Aspirant</span>
+
+                                    <!-- Name Overlay Banner -->
+                                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent p-4 text-white">
+                                        <p class="text-sm font-semibold leading-tight">ออมสิน (Aomsin)</p>
+                                        <p class="text-xs text-slate-300 font-light mt-0.5">Public Health Aspirant</p>
+                                    </div>
                                 </div>
 
                                 <div class="space-y-3 text-xs sm:text-sm">
@@ -571,17 +584,8 @@
                     <p class="text-slate-500 dark:text-slate-400 text-sm mt-3">สามารถติดต่อสอบถามข้อมูลเพิ่มเติมได้ตามช่องทางด้านล่าง</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                     
-                    <!-- Phone -->
-                    <a href="tel:0615439861" class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 hover:border-brand-500 hover:shadow-lg transition-all text-center group">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400">เบอร์โทรศัพท์</h3>
-                        <p class="text-base font-bold text-slate-900 dark:text-white mt-1">061-543-9861</p>
-                    </a>
-
                     <!-- Email -->
                     <a href="mailto:myou3655@gmail.com" class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 hover:border-brand-500 hover:shadow-lg transition-all text-center group">
                         <div class="w-12 h-12 rounded-xl bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
@@ -635,10 +639,11 @@
             <ol class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-decimal pl-5 py-2">
                 <li>สมัครบัญชีที่ <a href="https://github.com" target="_blank" class="text-brand-600 underline font-medium">GitHub.com</a> (หากยังไม่มี)</li>
                 <li>สร้าง Repository ใหม่ ตั้งชื่อเช่น <code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-brand-600">my-portfolio</code> (ตั้งค่าเป็น Public)</li>
-                <li>อัปโหลดไฟล์นี้ โดยบันทึกชื่อเป็น <code class="font-bold text-emerald-600">index.html</code> เท่านั้น</li>
+                <li>อัปโหลดไฟล์เว็บนี้ โดยตั้งชื่อไฟล์ว่า <code class="font-bold text-emerald-600">index.html</code></li>
+                <li><strong>ดาวน์โหลดรูปโปรไฟล์ของคุณ</strong> และเปลี่ยนชื่อไฟล์เป็น <code class="font-bold text-brand-600">profile.jpg</code> จากนั้นอัปโหลดขึ้น GitHub ในโฟลเดอร์เดียวกัน</li>
                 <li>ไปที่แถบ <strong>Settings</strong> > <strong>Pages</strong> ของ Repository นั้น</li>
                 <li>ในส่วน Build and deployment ให้เลือก Branch เป็น <code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">main</code> แล้วกด <strong>Save</strong></li>
-                <li>รอประมาณ 1-2 นาที คุณจะได้ลิงก์เว็บไซต์ออนไลน์พร้อมแชร์ได้เลย!</li>
+                <li>รอประมาณ 1-2 นาที คุณจะได้ลิงก์เว็บไซต์ออนไลน์พร้อมแสดงรูปภาพทันที!</li>
             </ol>
 
             <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
